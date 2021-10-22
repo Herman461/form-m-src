@@ -1,0 +1,613 @@
+.page {
+   padding: 237px 0px 0px 0px;
+   @media (max-width: $md1+px) {
+      padding: 205px 0px 0px 0px;
+   }
+   @media (max-width: $md2+px) {
+      padding: 60px 0px 0px 0px;
+   }
+   &__bg {
+      width: 100%;
+      padding: 0px 0px 35% 0px;
+      @media (min-width: $md2+px) {
+         position: absolute;
+         top: 0;
+         left: 0;
+      }
+      @media (max-width: 600px) {
+         padding: 0px 0px 81.2% 0px;
+      }
+   }
+
+   &__body {
+      @media (min-width: $md2+px) {
+         position: relative;
+         padding: 27% 15px 0px 15px;
+      }
+   }
+
+   &__content {
+      @include adaptiv-value('padding-top', 50, 30, 1);
+      @media (min-width: $md2+px) {
+         position: relative;
+         z-index: 2;
+         max-width: 1333px;
+         margin: 0 auto;
+         background-color: #fff;
+      }
+   }
+
+   &__intro {
+   }
+   &__quiz {
+      @include adaptiv-value('padding-top', 69, 40, 1);
+      @include adaptiv-value('padding-bottom', 120, 60, 1);
+   }
+	&__categories {
+		@include adaptiv-value('padding-bottom', 120, 60, 1);
+	}
+
+	&__products {
+		@include adaptiv-value('padding-bottom', 140, 70, 1);
+	}
+}
+.intro {
+   &__body {
+   }
+   &__container {
+      @media (min-width: 850px) {
+         display: flex;
+      }
+   }
+
+   &__title {
+      @include adaptiv-value('font-size', 65, 40, 1);
+      font-weight: 500;
+      line-height: 68 / 60 * 100%;
+      span {
+         color: $orangeColor;
+      }
+      @media (min-width: 850px) {
+         flex: 1 1 auto;
+         padding: 0px 45px 0px 0px;
+      }
+      @media (max-width: 850px) {
+         margin: 0px 0px 32px 0px;
+      }
+   }
+   &__slider {
+      @media (min-width: 850px) {
+         flex: 0 0 265px;
+      }
+   }
+}
+
+.slider-intro {
+   &__body {
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+	
+   }
+
+   &__slide {
+   }
+
+   &__text {
+      line-height: 21 / 14 * 100%;
+      color: $secondaryColor;
+   }
+
+   &__btn {
+   }
+
+   &__controls {
+      margin: 0px 0px 16px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__current {
+      @include adaptiv-value('font-size', 65, 40, 1);
+      color: $orangeColor;
+      flex: 1 1 auto;
+      padding: 0px 10px 0px 0px;
+   }
+
+   &__arrows {
+   }
+}
+
+
+
+.slider-intro {
+}
+.controls-slider-intro {
+}
+
+.slider-arrows {
+   display: flex;
+   &__arrow {
+      margin: 0px 9px;
+      font-size: 16px;
+      background-color: transparent;
+      transition: color 0.3s ease 0s;
+      &_prev {
+         transform: rotate(-180deg);
+      }
+
+      &_next {
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $orangeColor;
+         }
+      }
+   }
+}
+.btn {
+   position: relative;
+   background-color: $orangeColor;
+   display: inline-flex;
+   position: relative;
+   flex-direction: row-reverse;
+   text-transform: uppercase;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   min-height: 60px;
+   color: #fff;
+   font-size: 10px;
+   padding: 0px 45px;
+   letter-spacing: 0.05em;
+   font-weight: 600;
+   @media (min-width: $md2+px) {
+      &:hover {
+         &::after {
+            top: 7px;
+            left: 7px;
+         }
+      }
+   }
+   &::before {
+      margin: 0px 0px 0px 15px;
+   }
+   &::after {
+      content: '';
+      position: absolute;
+      transition: all 0.3s ease 0s;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $orangeColor;
+      background-color: transparent;
+   }
+   // &__body {
+   // 	display: inline-flex;
+   // 	position: relative;
+   // 	flex-direction: row-reverse;
+   // 	text-transform: uppercase;
+   // 	justify-content: center;
+   // 	align-items: center;
+   // 	min-height: 60px;
+   // 	color: #fff;
+   // 	font-size: 10px;
+   // 	padding: 0px 45px;
+   // 	letter-spacing: 0.05em;
+   // 	font-weight: 600;
+   // 	z-index: 5;
+   // 	&::before {
+   // 		position: absolute;
+   // 		top: 0;
+   // 		left: 0;
+   // 		width: 100%;
+   // 		height: 100%;
+   // 		background-color: $orangeColor;
+   // 		z-index: 2;
+   // 	}
+
+   // }
+}
+
+//=================================================================================================================================
+
+.page {
+}
+.quiz {
+   &__container {
+		@media (min-width: 850px) {
+			display: flex;
+		}
+   }
+
+   &__info {
+		
+		position: relative;
+		@media (min-width: 850px) {
+			align-self: flex-start;
+		}
+		@media (max-width: 850px) {
+			margin: 0px 0px 50px 0px;
+		}
+   }
+
+   &__discount {
+		font-weight: 600;
+		color: $orangeColor;
+		@include adaptiv-value("font-size", 200, 155, 1);
+   }
+
+   &__text {
+		position: absolute;
+		top: 60%;
+		left: 0;
+		max-width: 92%;
+		z-index: 2;
+		background-color: #fff;
+		padding: 7px 16px 0px 7px;
+		line-height: 35 / 28 * 100%;
+		@include adaptiv-value("font-size", 28, 20, 1);
+		span {
+			color: $orangeColor;
+			font-weight: 600;
+		}
+		@include adaptiv-value("padding-bottom", 47, 15, 1);
+   }
+
+   &__stages {
+		@media (min-width: 850px) {
+			flex: 1 1 auto;
+			padding: 0px 0px 0px 86 / $maxWidthContainer * 100%;
+		}
+
+   }
+}
+
+.stages-quiz {
+   &__row {
+		&:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+		@media (min-width: 650px) {
+			display: grid;
+			@include adaptiv-value("gap", 80, 30, 1);
+			grid-auto-columns: 1fr;
+			grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		}
+   }
+
+   &__column {
+		@media (max-width: 650px) {
+			margin: 0px 0px 32px 0px;
+			display: flex;
+			align-items: center;
+		}
+   }
+
+   &__number {
+		font-size: 35px;
+		color: $orangeColor;
+		@media (max-width: 650px) {
+			font-size: 48px;
+		}
+		@media (min-width: 650px) {
+			margin: 0px 0px 30px 0px;
+		}
+   }
+
+   &__text {
+		
+		line-height: 21 / 14 * 100%;
+		@media (max-width: 650px) {
+			flex: 1 1 auto;
+			padding: 0px 0px 0px 30px;
+		}
+   }
+
+   &__btn {
+   }
+}
+
+.categories {
+
+	&__container {
+	}
+
+	&__top {
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__content {
+
+	}
+	&__items {
+
+		@media (max-width: $md2+px) {
+			overflow: visible;
+		}
+		@media (min-width: $md2+px) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, auto);
+			gap: 20px;
+		}
+	}
+
+	&__item {
+
+		&_b {
+			@media (min-width: $md2+px) {
+				grid-row: span 2;
+			}
+		}
+		@media (max-width: 700px) {
+			width: 80%;
+		}
+		@media (max-width: 490px) {
+			width: 100%;
+		}
+	}
+}
+
+.section-top {
+	
+	&__title {
+		display: inline-block;
+		@include adaptiv-value("font-size", 40, 35, 1);
+		line-height: 50 / 40 * 100%;
+		font-weight: 500;
+		margin: 0px 30px 0px 0px;
+	}
+
+	&__link {
+		color: $grayColor;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
+}
+.item-categories {
+	position: relative;
+	&__image {
+		height: 100%;
+	
+		padding: 0px 0px 68% 0px;
+		@media (max-width: 415px) {
+			padding: 0px 0px 110% 0px;
+		}
+		@media (max-width: $md2+px) {
+			padding: 0px 0px 81% 0px;
+		}
+	}
+
+	&__content {
+		background-color: #fff;
+		color: inherit;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		@include adaptiv-value("bottom", 35, 1, 1);
+		transition: background-color 0.3s ease 0s;
+		padding: 26px 20px;
+		display: inline-block;
+		width: 80%;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $orangeColor;
+				.item-categories__title {
+					color: #fff;
+				}
+				.item-categories__more {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		font-weight: 500;
+		margin: 0px 0px 10px 0px;
+		transition: color 0.3s ease 0s;
+	}
+
+	&__more {
+		display: inline-flex;
+		color: $orangeColor;
+		font-weight: 500;
+		font-size: 14px;
+		flex-direction: row-reverse;
+		transition: color 0.3s ease 0s;
+		&::before {
+			margin: 0px 0px 0px 10px;
+		}
+
+	}
+}
+
+
+.page {
+
+
+}
+.products {
+
+	&__container {
+	}
+
+	&__top {
+		margin: 0px 0px 32px 0px;
+	}
+
+	&__content {
+
+	}
+	&__items {
+		@media (min-width: $md2+px) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px;
+		}
+		@media (max-width: $md2+px) {
+			overflow: visible;
+		}
+		@media (max-width: 700px) {
+			.item-product {
+				width: 75%;
+			}
+		}
+		@media (max-width: 490px) {
+			.item-product {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+.item-product {
+	display: flex;
+	flex-direction: column;
+	&__image {
+		display: block;
+		width: 100%;
+		padding: 0px 0px 86.5% 0px;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__category {
+		color: $grayColor;
+		margin: 0px 0px 12px 0px;
+		display: block;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+	}
+
+	&__title {
+		@include adaptiv-value("font-size", 23, 18, 1);
+		line-height: 30 / 23 * 100%;
+		color: inherit;
+		font-weight: 500;
+		display: block;
+		margin: 0px 0px 15px 0px;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+	}
+	&__content {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $md3+px) {
+			padding: 0px 0px 0px 10px;
+		}
+	}
+	&__body {
+		flex: 1 1 auto;
+	}
+	&__bottom {
+		display: flex;
+		align-items: center;
+	}
+
+	&__price {
+		font-weight: 600;
+		font-size: 23px;
+		flex: 1 1 auto;
+		margin: 0px 16px 0px 0px;
+	}
+
+	&__btn {
+		// flex: 1 0 auto;
+		flex: 0 0 auto;
+		flex-direction: row;
+		&::before {
+			font-size: 12px;
+			margin: 0px 12px 0px 0px;
+		}
+	}
+}
+
+
+.page {
+
+	&__info {
+	}
+}
+.info {
+
+	&__container {
+	}
+
+	&__body {
+	}
+
+	&__main {
+	}
+
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__text {
+	}
+
+	&__form {
+	}
+
+	&__about {
+	}
+}
+
+.form-info {
+
+	&__input {
+		display: flex;
+		.input {
+			flex: 1 1 auto;
+		}
+	}
+
+	&__icon {
+		flex: 0 0 60px;
+		display: flex;
+		align-items: center;
+		height: 60px;
+	}
+	&__btn {
+
+	}
+}
+.input {
+}
+.checkbox {
+
+	&__input {
+	}
+
+	&__text {
+	}
+}
+
+.about-info {
+
+	&__item {
+	}
+
+	&__text {
+	}
+}
