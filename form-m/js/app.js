@@ -135,7 +135,6 @@ function activateOrDeactivateSlider(className, breakpoint, swiperObj, swiperOpti
             .match(/swiper-.*/g)
             .join('')
             .split(' ');
-         console.log(swiperBodyClasses);
          body.classList.remove(...swiperBodyClasses);
       }
    }
@@ -275,8 +274,8 @@ window.addEventListener('resize', function () {
 
 
 
-let mainCategoriesSlider;
-let mainCategoriesOptions = {
+let categoriesSlider;
+let categoriesOptions = {
 	spaceBetween: 20,
 	speed: 800,
 	slidesPerView: 1,
@@ -292,9 +291,9 @@ let mainCategoriesOptions = {
 		}
 	}
 };
-activateOrDeactivateSlider('.categories__items', 991, mainCategoriesSlider, mainCategoriesOptions);
+activateOrDeactivateSlider('.categories__items', 991, categoriesSlider, categoriesOptions);
 window.addEventListener('resize', function () {
-	activateOrDeactivateSlider('.categories__items', 991, mainCategoriesSlider, mainCategoriesOptions);
+	activateOrDeactivateSlider('.categories__items', 991, categoriesSlider, categoriesOptions);
 });
 
 

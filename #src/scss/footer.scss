@@ -1,5 +1,232 @@
 //=================================================================================================================================
 
 
+._footer-title {
+	@include adaptiv-value("font-size", 23, 20, 1);
+	color: $orangeColor;
+	font-weight: 500;
+	@media (max-width: 1080px) {
+		font-size: 20px;
+	}
+}
+
+.footer {
+	border-top: 1px solid #D5D4D4;
+	@include adaptiv-value("padding-top", 80, 50, 1);
+	@include adaptiv-value("padding-bottom", 50, 30, 1);
+	// .footer__container
+	&__container {
+	}
+	// .footer__body
+	&__body {
+		@media (min-width: 1080px) {
+			@include adaptiv-value("gap", 56, 1, 1);
+		}
+		@media (min-width: $md3+px) and (max-width: 1080px) {
+			gap: 30px;
+		}
+		@media (max-width: $md2+px) {
+
+		}
+		@media (min-width: $md2+px) {
+			grid-template-columns: 240px 1fr 200px;
+		}
+		@media (min-width: $md3+px) {
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr 200px;
+		}
+	}
+	// .footer__main
+	&__main {
+		flex: 0 0 240px;
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $md3+px) and (max-width: $md2+px) {
+			grid-column: span 2;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+	// .footer__logo
+	&__logo {
+		display: inline-block;
+		&:not(:last-child) {
+			@include adaptiv-value("margin-bottom", 30, 20, 1);
+		}
+		img {
+			max-width: 100%;
+			height: 53px;
+		}
+		
+	}
+	// .footer__phone
+	&__phone {
+		position: relative;
+		padding: 0px 0px 0px 16px;
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+		a {
+			font-weight: 600;
+			font-size: 16px;
+			color: inherit;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 6px;
+			height: 6px;
+			background-color: $greenColor;
+			transform: translate(0, -50%);
+			border-radius: 50%;
+		}
+	}
+	// .footer__actions
+	&__actions {
+		flex: 1 1 auto;
+		&:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+	// .footer__action
+	&__action {
+		font-size: 16px;
+		display: inline-block;
+		
+		font-weight: 500;
+		color: $grayColor;
+	}
+	// .footer__politics
+	&__politics {
+		line-height: 17px;
+		color: #6B6A6A;
+	}
+	// .footer__menu
+	&__menu {
+		flex: 1 1 auto;
+	}
+	// .footer__social
+	&__social {
+	}
+}
+
+.menu-footer {
+	@media (min-width: $md3+px) {
+		display: flex;
+		margin: 0px -25px;
+	}	
+	// .menu-footer__column
+	&__column {
+		@media (min-width: $md3+px) {
+			flex: 0 1 50%;
+			padding: 0px 25px;
+		}
+		@media (max-width: $md3+px) {
+				margin: 0px 0px 20px 0px;		
+		}
+	}
+	// .menu-footer__title
+	&__title {
+		background-color: transparent;
+		@media (min-width: $md3+px) {
+			margin: 0px 0px 23 / 23 * 1em 0px;
+			&::before {
+				display: none;	
+			}	
+		}
+	}
+	&._init .menu-footer__title {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		width: 100%;
+		&::before {
+			transition: all 0.3s ease 0s;
+			transform: rotate(90deg);
+		}
+		&._active::before {
+			transform: rotate(-90deg);
+		}
+	}
+	&._init .menu-footer__link {
+		font-size: 18px;
+	}
+	&._init .menu-footer__item {
+		&:not(:last-child) {
+			margin: 0px 0px 25px 0px;
+		}
+	}
+	// .menu-footer__list
+	&__list {
+		@media (max-width: $md3+px) {
+			padding: 15px 0px 0px 0px;
+		}
+	}
+	// .menu-footer__item
+	&__item {
+
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+		
+	}
+	// .menu-footer__link
+	&__link {
+		color: #6B6A6A;
+		line-height: 18 / 14 * 100%;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor; 
+			}
+		}
+	}
+}
+
+.social-footer {
+	display: flex;
+	flex-direction: column;
+	// .social-footer__title
+	&__title {
+		margin: 0px 0px 23 / 23 * 1em 0px;
+	}
+	// .social-footer__items
+	&__items {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	// .social-footer__item
+	&__item {
+		font-size: 24px;
+		color: #6B6A6A;
+		transition: all 0.3s ease 0s;
+		&:not(:last-child) {
+			margin: 0px 25px 0px 0px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+		@media (max-width: $md3+px) {
+				font-size: 26px;
+		}
+	}
+	// .social-footer__copy
+	&__copy {
+		color: #6B6A6A;
+	}
+}
+
+
 
 //=================================================================================================================================
